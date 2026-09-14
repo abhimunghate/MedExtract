@@ -1,0 +1,30 @@
+# Virtual Environment
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Environment variables
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Operating System
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Generated outputs
+outputs/*
+!outputs/.gitkeep
+
+# Trained models
+models/*
+!models/README.md

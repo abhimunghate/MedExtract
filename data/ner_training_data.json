@@ -1,0 +1,237 @@
+[
+    {
+        "text": "The patient has fever and severe headache.",
+        "entities": [
+            {
+                "start": 16,
+                "end": 21,
+                "label": "SYMPTOM"
+            },
+            {
+                "start": 26,
+                "end": 41,
+                "label": "SYMPTOM"
+            }
+        ]
+    },
+    {
+        "text": "The patient has cough and fatigue.",
+        "entities": [
+            {
+                "start": 16,
+                "end": 21,
+                "label": "SYMPTOM"
+            },
+            {
+                "start": 26,
+                "end": 33,
+                "label": "SYMPTOM"
+            }
+        ]
+    },
+    {
+        "text": "The doctor diagnosed influenza.",
+        "entities": [
+            {
+                "start": 21,
+                "end": 30,
+                "label": "DISEASE"
+            }
+        ]
+    },
+    {
+        "text": "The patient suffers from diabetes.",
+        "entities": [
+            {
+                "start": 25,
+                "end": 33,
+                "label": "DISEASE"
+            }
+        ]
+    },
+    {
+        "text": "The patient has hypertension.",
+        "entities": [
+            {
+                "start": 16,
+                "end": 28,
+                "label": "DISEASE"
+            }
+        ]
+    },
+    {
+        "text": "The doctor prescribed Paracetamol.",
+        "entities": [
+            {
+                "start": 22,
+                "end": 33,
+                "label": "MEDICINE"
+            }
+        ]
+    },
+    {
+        "text": "The patient was given Amoxicillin.",
+        "entities": [
+            {
+                "start": 22,
+                "end": 33,
+                "label": "MEDICINE"
+            }
+        ]
+    },
+    {
+        "text": "Take 500 mg of Paracetamol.",
+        "entities": [
+            {
+                "start": 5,
+                "end": 11,
+                "label": "DOSAGE"
+            },
+            {
+                "start": 15,
+                "end": 26,
+                "label": "MEDICINE"
+            }
+        ]
+    },
+    {
+        "text": "Take the medicine twice daily.",
+        "entities": [
+            {
+                "start": 18,
+                "end": 29,
+                "label": "FREQUENCY"
+            }
+        ]
+    },
+    {
+        "text": "Continue the treatment for five days.",
+        "entities": [
+            {
+                "start": 27,
+                "end": 36,
+                "label": "DURATION"
+            }
+        ]
+    },
+    {
+        "text": "The patient has high blood pressure.",
+        "entities": [
+            {
+                "start": 16,
+                "end": 35,
+                "label": "MEDICAL_TERM"
+            }
+        ]
+    },
+    {
+        "text": "The doctor checked the heart rate.",
+        "entities": [
+            {
+                "start": 23,
+                "end": 33,
+                "label": "MEDICAL_TERM"
+            }
+        ]
+    },
+    {
+        "text": "The patient complained of persistent chest pain.",
+        "entities": [
+            {
+                "start": 37,
+                "end": 47,
+                "label": "SYMPTOM"
+            }
+        ]
+    },
+    {
+        "text": "The patient was prescribed Amoxicillin 250 mg three times daily.",
+        "entities": [
+            {
+                "start": 27,
+                "end": 38,
+                "label": "MEDICINE"
+            },
+            {
+                "start": 46,
+                "end": 57,
+                "label": "DOSAGE"
+            },
+            {
+                "start": 58,
+                "end": 63,
+                "label": "FREQUENCY"
+            }
+        ]
+    },
+    {
+        "text": "The patient experienced nausea for two days.",
+        "entities": [
+            {
+                "start": 24,
+                "end": 30,
+                "label": "SYMPTOM"
+            },
+            {
+                "start": 35,
+                "end": 43,
+                "label": "DURATION"
+            }
+        ]
+    },
+    {
+        "text": "The patient complained of persistent chest pain.",
+        "entities": [
+            {
+                "start": 37,
+                "end": 47,
+                "label": "SYMPTOM"
+            }
+        ]
+    },
+    {
+        "text": "The patient experienced nausea and vomiting.",
+        "entities": [
+            {
+                "start": 24,
+                "end": 30,
+                "label": "SYMPTOM"
+            },
+            {
+                "start": 35,
+                "end": 43,
+                "label": "SYMPTOM"
+            }
+        ]
+    },
+    {
+        "text": "The doctor prescribed Ibuprofen 400 mg once daily.",
+        "entities": [
+            {
+                "start": 22,
+                "end": 31,
+                "label": "MEDICINE"
+            },
+            {
+                "start": 32,
+                "end": 38,
+                "label": "DOSAGE"
+            },
+            {
+                "start": 39,
+                "end": 49,
+                "label": "FREQUENCY"
+            }
+        ]
+    },
+    {
+        "text": "The patient has chronic hypertension.",
+        "entities": [
+            {
+                "start": 24,
+                "end": 36,
+                "label": "DISEASE"
+            }
+        ]
+    }
+]

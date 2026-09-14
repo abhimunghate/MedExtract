@@ -1,0 +1,62 @@
+[
+    {
+        "text": "The patient complained of headache and nausea.",
+        "entities": [
+            {
+                "start": 31,
+                "end": 39,
+                "label": "SYMPTOM"
+            },
+            {
+                "start": 44,
+                "end": 50,
+                "label": "SYMPTOM"
+            }
+        ]
+    },
+    {
+        "text": "The patient was diagnosed with diabetes.",
+        "entities": [
+            {
+                "start": 35,
+                "end": 43,
+                "label": "DISEASE"
+            }
+        ]
+    },
+    {
+        "text": "The doctor prescribed Ibuprofen.",
+        "entities": [
+            {
+                "start": 22,
+                "end": 31,
+                "label": "MEDICINE"
+            }
+        ]
+    },
+    {
+        "text": "Take 250 mg twice daily.",
+        "entities": [
+            {
+                "start": 5,
+                "end": 11,
+                "label": "DOSAGE"
+            },
+            {
+                "start": 12,
+                "end": 23,
+                "label": "FREQUENCY"
+            }
+        ]
+    },
+    {
+        "text": "Continue treatment for seven days.",
+        "entities": [
+            {
+                "start": 29,
+                "end": 39,
+                "label": "DURATION"
+            }
+        ]
+    }
+]

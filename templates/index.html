@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="MedExtract - Medical Text Information Extraction System"
+    >
+
+    <title>MedExtract | Medical NLP</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="container navbar-content">
+
+            <div class="brand">
+                <div class="brand-icon">M</div>
+
+                <div>
+                    <h1>MedExtract</h1>
+                    <span>Medical NLP</span>
+                </div>
+            </div>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                NLP Engine Ready
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+        <!-- Hero Section -->
+
+        <section class="hero">
+
+            <span class="badge">
+                Natural Language Processing
+            </span>
+
+            <h2>
+                Medical Text
+                <span>Information Extraction</span>
+            </h2>
+
+            <p>
+                Extract symptoms, medicines, diseases, medical terms,
+                dosage, frequency and duration from unstructured medical text.
+            </p>
+
+        </section>
+
+
+        <!-- Input Section -->
+
+        <section class="input-card">
+
+            <div class="section-header">
+
+                <div>
+                    <h3>Enter Medical Text</h3>
+
+                    <p>
+                        Enter a medical description, clinical note,
+                        or synthetic patient record.
+                    </p>
+                </div>
+
+                <span id="characterCount">
+                    0 characters
+                </span>
+
+            </div>
+
+
+            <textarea
+                id="medicalText"
+                placeholder="Example: The patient has fever and severe headache. The doctor prescribed Paracetamol 500 mg twice daily for five days."
+                spellcheck="true"
+            ></textarea>
+
+
+            <div class="input-actions">
+
+                <button
+                    id="sampleButton"
+                    class="secondary-button"
+                    type="button"
+                >
+                    Load Sample
+                </button>
+
+                <button
+                    id="clearButton"
+                    class="secondary-button"
+                    type="button"
+                >
+                    Clear
+                </button>
+
+                <button
+                    id="analyzeButton"
+                    class="primary-button"
+                    type="button"
+                >
+                    <span id="buttonText">
+                        Analyze Medical Text
+                    </span>
+
+                    <span
+                        id="loader"
+                        class="loader hidden"
+                    ></span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Error -->
+
+        <div
+            id="errorMessage"
+            class="error-message hidden"
+        ></div>
+
+
+        <!-- Results Section -->
+
+        <section
+            id="resultsSection"
+            class="results-section hidden"
+        >
+
+            <div class="results-header">
+
+                <div>
+                    <span class="badge">
+                        Analysis Complete
+                    </span>
+
+                    <h3>Extracted Medical Information</h3>
+                </div>
+
+                <div
+                    id="entityCount"
+                    class="entity-count"
+                >
+                    0 entities
+                </div>
+
+            </div>
+
+
+            <!-- Entity Cards -->
+
+            <div
+                id="entityCards"
+                class="entity-grid"
+            ></div>
+
+
+            <!-- Highlighted Text -->
+
+            <div class="highlight-card">
+
+                <div class="section-header">
+
+                    <div>
+                        <h3>Highlighted Medical Text</h3>
+
+                        <p>
+                            Identified entities are highlighted according
+                            to their category.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="highlightedText"
+                    class="highlighted-text"
+                ></div>
+
+            </div>
+
+        </section>
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <span class="stat-label">Symptoms</span>
+                <strong id="symptomCount">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Medicines</span>
+                <strong id="medicineCount">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Diseases</span>
+                <strong id="diseaseCount">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Total Entities</span>
+                <strong id="totalCount">0</strong>
+            </div>
+
+        </section>
+
+        <section class="history-section">
+
+            <div class="section-header">
+
+                <h2>Recent Extractions</h2>
+
+                <button
+                    id="clearHistory"
+                    type="button"
+                >
+                    Clear History
+                </button>
+
+            </div>
+
+            <div id="historyList"></div>
+
+        </section>
+
+        <button
+            id="downloadJson"
+            type="button"
+        >
+            Download JSON
+        </button>
+
+
+        <section class="model-info">
+
+            <h3>Extraction Pipeline</h3>
+
+            <div class="pipeline">
+
+                <div class="pipeline-step">
+                    <strong>1</strong>
+                    <span>Text Preprocessing</span>
+                </div>
+
+                <div class="pipeline-arrow">→</div>
+
+                <div class="pipeline-step">
+                    <strong>2</strong>
+                    <span>Custom NER</span>
+                </div>
+
+                <div class="pipeline-arrow">→</div>
+
+                <div class="pipeline-step">
+                    <strong>3</strong>
+                    <span>Dictionary Matching</span>
+                </div>
+
+                <div class="pipeline-arrow">→</div>
+
+                <div class="pipeline-step">
+                    <strong>4</strong>
+                    <span>Rule Extraction</span>
+                </div>
+
+                <div class="pipeline-arrow">→</div>
+
+                <div class="pipeline-step">
+                    <strong>5</strong>
+                    <span>Entity Resolution</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Legend -->
+
+        <section class="legend-section">
+
+            <h3>Entity Categories</h3>
+
+            <div class="legend">
+
+                <div class="legend-item">
+                    <span class="legend-color symptom"></span>
+                    Symptoms
+                </div>
+
+                <div class="legend-item">
+                    <span class="legend-color medicine"></span>
+                    Medicines
+                </div>
+
+                <div class="legend-item">
+                    <span class="legend-color disease"></span>
+                    Diseases
+                </div>
+
+                <div class="legend-item">
+                    <span class="legend-color medical-term"></span>
+                    Medical Terms
+                </div>
+
+                <div class="legend-item">
+                    <span class="legend-color dosage"></span>
+                    Dosage
+                </div>
+
+                <div class="legend-item">
+                    <span class="legend-color frequency"></span>
+                    Frequency
+                </div>
+
+                <div class="legend-item">
+                    <span class="legend-color duration"></span>
+                    Duration
+                </div>
+
+            </div>
+
+        </section>
+
+        <div class="disclaimer">
+
+            <strong>Educational Use Only</strong>
+
+            <p>
+                This system extracts predefined medical
+                entities from text for educational and
+                NLP research purposes. It does not provide
+                medical diagnosis, treatment recommendations,
+                or clinical advice.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+                MedExtract — Medical Text Information Extraction System
+            </p>
+
+            <span>
+                Developed for academic and educational purposes.
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <script
+        src="{{ url_for('static', filename='js/script.js') }}"
+    ></script>
+
+</body>
+
+</html>
